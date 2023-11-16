@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
     <style>
         body{
             background-color: #f5f5f5;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
         }
         .baselayer{
             
@@ -31,12 +34,22 @@
         .logokiri{
             height: 50px;
             width: 200px;
-            background-color: grey;
+            /* background-image: url('https://raw.githubusercontent.com/randesu/MyHTML/main/logo.png'); */
+            /* background-color: grey; */
         }
         .logokanan{
             height: 50px;
             width: 200px;
-            background-color: grey;
+            /* background-color: grey; */
+            display: inline-flex;
+            justify-content: end;
+        }
+        .bustext{
+            /* padding-top: 10px; */
+            padding-left: 10px;
+            width: max-content;
+            font-size: 18px;
+            /* margin: auto; */
         }
         .paragraphcontainer{
             margin-left: auto;
@@ -46,7 +59,7 @@
             background-color: white;
         }
         .information{
-            border-top: 1px dotted black ;
+            border-top: 1px dashed grey ;
             margin-left: auto;
             margin-right: auto;
             width: 760px;
@@ -69,27 +82,36 @@
             margin-left: auto;
             margin-right: auto;
             width: 740px;
-            height: 150px;
+            height: 130px;
             background-color: white;
             display: inline-flex;
             align-items: center;
         }
         .departurebox{
             width: 278px;
-            height: 130px;
+            height: 100px;
             background-color: white;
             border-right: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         .arrivalbox{
             width: 278px;
-            height: 130px;
+            height: 100px;
             background-color: white;
             border-right: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         .durationbox{
             width: 178px;
-            height: 130px;
+            height: 100px;
             background-color: white;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
         }
         .bottominfo{
             border-bottom: 1px solid black;
@@ -103,7 +125,7 @@
             align-items: center;
         }
         .info1{
-            padding-left: 10px;
+            padding-left: 20px;
             width: 220px;
             height: 130px;
             background-color: white;
@@ -116,55 +138,81 @@
             background-color: white;
             /* border-right: 1px solid black; */
         }
+
+        .displaytime{
+            padding-bottom: 10px;
+            margin-left: 20px;
+            margin-block-end: 0;
+            margin-block-start: 0;
+        }
+        .displaytime1{
+            padding-bottom: 10px;
+            margin-left: 20px;
+            margin-block-end: 0;
+            margin-block-start: 0;
+            font-size: 23px;
+        }
     </style>
 </head>
 <body>
     <div class="baselayer">
-
+        <!-- logo atas  -->
         <div class="toplogo">
-            <div class="logokiri"></div>
-            <div class="logokanan"></div>
+            <div class="logokiri">
+                <img src="https://raw.githubusercontent.com/randesu/MyHTML/main/logo.png" alt="" style="height: 25px;width:auto;margin-top: 12px;">
+            </div>
+            <div class="logokanan">
+                <img src="https://raw.githubusercontent.com/randesu/MyHTML/main/bus.png" alt="" style="height: 28px;width: auto;margin-top: 12px;">
+                <p class="bustext">Bus & Shuttle</p>
+
+            </div>
         </div>
 
+        <!-- Informasi pemberitahuan  -->
         <div class="paragraphcontainer">
             <p style="font-size: 30px;">Your e-ticket is here!</p>
             <p style="margin-bottom: 0;padding-inline-start: 0;font-size: 20px;"><b>Dear Aditya Yuli Prakoso,</b></p>
-            <p style="padding-inline-start: 0;font-size: 20px;">Your bus reservation has been sucsessfully confirmed. Please find your e-ticket and receipt attached</p>
+            <p style="padding-inline-start: 0;font-size: 19px;">Your bus reservation has been sucsessfully confirmed. Please find your e-ticket and receipt attached</p>
         </div>
 
         <div class="information">
+            <!-- Informasi bus departure  -->
             <div class="departure">
-                <p style="font-size: 25px;">Departure Bus</p>
-                <p style="font-size: 20px;">Semarang-Yogyakarta</p>
+                <p style="font-size: 25px;padding-inline-start: 0;margin-block-end: 0;margin-bottom: 10px;">Departure Bus</p>
+                <p style="font-size: 20px;padding-inline-start: 0;margin-block-start: 0;">Semarang-Yogyakarta</p>
             </div>
+
+            <!-- Informasi time depart & arrival  -->
             <div class="bottombox1">
                 <div class="timebox">
                     <div class="departurebox">
-                        <p>Departure</p>
-                        <p>Time:time</p>
-                        <p>Day, 17 Jun 2023</p>
+                        <p class="displaytime">Departure</p>
+                        <p class="displaytime1">10:45</p>
+                        <p class="displaytime">Sat, 17 Jun 2023</p>
                     </div>
                     <div class="arrivalbox">
-                        <p>Departure</p>
-                        <p>Time:time</p>
-                        <p>Day, 17 Jun 2023</p>
+                        <p class="displaytime">Arrival</p>
+                        <p class="displaytime1">14:30</p>
+                        <p class="displaytime">Sat, 17 Jun 2023</p>
                     </div>
                     <div class="durationbox">
-                        <p>Departure</p>
-                        <p>Time:time</p>
-                        <p>Day, 17 Jun 2023</p>
+                        <p class="displaytime">Duration</p>
+                        <p class="displaytime1">3h 45m</p>
+                        
                     </div>
                 </div>
+
+                <!-- Informasi penumpang dan booking code  -->
                 <div class="bottominfo">
                     <div class="info1">
-                        <p>Yogyakarta 019239188</p>
-                        <p>Time:time</p>
-                        <p>Day, 17 Jun 2023</p>
+                        <p>Joglosemar 166127112-82_16</p>
+                        <p>Reguler</p>
+                        
                     </div>
                     <div class="info2">
-                        <p>Departure</p>
-                        <p>Time:time</p>
-                        <p>Day, 17 Jun 2023</p>
+                        <p style="margin-inline-end: 0;padding-inline-end: 0;">Booking code</p>
+                        <p style="color: #0766AD;font-size: 20px;margin-top: -12px;">BJGS2306161FMY</p>
+                        
                     </div>
 
                 </div>
@@ -173,6 +221,7 @@
         </div>
 
     </div>
+    
     
 </body>
 </html>
